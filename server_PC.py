@@ -11,7 +11,7 @@ import requests
 s=socket.socket()
 hostname=socket.gethostname()
 port=9595
-s.bind((hostname,port))
+s.bind(('127.0.1.1',port))
 s.listen(5)
 while True:
     print 'server started'
@@ -24,5 +24,6 @@ while True:
     with open(targetfile,"wb") as code:  # writing to target file
      code.write(r.content);
      print 'page downloaded'
+    conn.send("downloading completed")
     conn.close()
 s.close()
