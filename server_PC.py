@@ -5,7 +5,7 @@ def targetname(url):
 
 import sys
 import socket
-sys.path.append('/home/subhash/subh/python/requests')
+sys.path.append('/Users/subh/subh_mac/github/request/requests')
 import requests
 
 
